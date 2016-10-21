@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Created by PhpStorm.
  * User: Ivaylo
@@ -48,8 +48,8 @@ imagealphablending($wmkIMG,true);
 imagecopymerge($_FILES["fileToUpload"]["tmp_name"], $wmkIMG, 755, 864, 0, 0, 465, 36, 50);
 
 // Save the image to file and free memory
-echo '<img src= "watermark.png" alt="test"/>';
-echo "test beeee";
+echo '<img src= "' . $_FILES["fileToUpload"]["tmp_name"] . '" alt="test"/>';
+
 imagedestroy($actual_file);
 imagedestroy($wmkIMG);
 }
